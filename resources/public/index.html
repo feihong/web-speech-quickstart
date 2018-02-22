@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Speech Demo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Web Speech Demo</h1>
+
+  <button class="button speak">Speak</button>
+
+  <button class="button speak-delay">Speak after delay</button>
+
+  <button class="button speak-ajax">Speak after ajax</button>
+
+  <button class="button speak-ajax-delay">Speak after ajax and delay</button>
+
+  <button class="button speak-repeat">Speak repeatedly</button>
+
+  <div id="app"></div>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="js/vanilla.js"></script>
+  <script src="js/compiled/app.js"></script>
+  <script>demo.core.init();</script>
+</div>
+
+</body>
+</html>
