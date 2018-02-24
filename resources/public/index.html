@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Web Speech Demo</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <style>
+  .re-frame {
+    border: 1px dashed gray;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  </style>
 </head>
 <body>
 
@@ -13,13 +20,22 @@
 
   <button class="button speak">Speak</button>
 
-  <button class="button speak-delay">Speak after delay</button>
+  <h2>Speak inside callback</h2>
 
-  <button class="button speak-ajax">Speak after ajax</button>
-
-  <button class="button speak-ajax-delay">Speak after ajax and delay</button>
-
-  <button class="button speak-repeat">Speak repeatedly</button>
+  <div class="field is-grouped">
+    <p class="control">
+      <button class="button speak-delay">Speak after delay</button>
+    </p>
+    <p class="control">
+      <button class="button speak-ajax">Speak after ajax</button>
+    </p>
+    <p class="control">
+      <button class="button speak-ajax-delay">Speak after ajax and delay</button>
+    </p>
+    <p class="control">
+      <button class="button speak-repeat">Speak repeatedly</button>
+    </p>
+  </div>
 
   <div id="app"></div>
 
