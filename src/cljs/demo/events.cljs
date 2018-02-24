@@ -2,19 +2,23 @@
   (:require [re-frame.core :as rf :refer [trim-v]]
             [demo.db :as db]))
 
+(defn speak [phrase]
+  (.speak js/speechSynthesis (js/SpeechSynthesisUtterance. phrase)))
+
+(rf/reg-fx
+  ::speak
+  (fn [phrase]
+    (speak phrase)))
+
 (rf/reg-event-db
  ::initialize-db
  (fn  [_ _]
    db/default-db))
 
-(defn speak [phrase]
-  (.speak js/speechSynthesis (js/SpeechSynthesisUtterance. phrase)))
-
-(rf/reg-event-db
+(rf/reg-event-fx
   ::say-something
-  (fn [db _]
-    (speak "Say something now")
-    db))
+  (fn [cofx [_ value]]
+    {::speak value}))
 
 (rf/reg-event-db
   ::say-another-thing

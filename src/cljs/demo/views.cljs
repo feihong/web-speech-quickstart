@@ -10,7 +10,7 @@
    [:div.field.is-grouped
     [:p.control
      [:button.button.is-rounded.is-primary
-      {:on-click #(rf/dispatch [::events/say-something])}
+      {:on-click #(rf/dispatch [::events/say-something "Say something now"])}
       "Simple dispatch"]]
     [:p.control
      [:button.button.is-rounded.is-info
